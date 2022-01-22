@@ -44,52 +44,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-header {
-    overflow-x: hidden;
-    background: radial-gradient(#fff, #c8c5ff);
-    overflow-y: hidden;
-    max-height: 630px;
-}
 
-header .nav-item:last-child {
-    padding-right: 5rem;
-}
-
-header .nav-item {
-    padding: 0.9em;
-}
-
-
-header a {
-    font-size: 0.9em;
-}
-
-.header-btn{
-    padding-top: 5px;
-}
-
-li a{
-    padding: 10px 20px;
-    color: var(--text-color);
-    font-weight: 500;
-}
-.sign-in{
-    background: #474fa0;
-    color: #fff;
-    border-radius: 0.5rem;
-    padding: 8px 20px;
-}
-
-.sign-in:hover{
-    background: var(--main-color);
-    list-style: none;
-    text-decoration: none;
-    color: white;
-}
-.sign-up:hover{
-    list-style: none;
-    text-decoration: none;
-}
 .form-container{
     width: 100%;
     height: auto;

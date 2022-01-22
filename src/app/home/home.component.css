@@ -1,0 +1,54 @@
+.nav-item:last-child {
+    padding-right: 5rem;
+}
+
+.nav-item {
+    padding: 0.9em;
+}
+
+header {
+    overflow-x: hidden;
+    background: radial-gradient(#fff, #c8c5ff);
+    overflow-y: hidden;
+    max-height: 557px;
+}
+
+nav{
+    background: radial-gradient(#fff, #c8c5ff);
+
+}
+
+
+header a {
+    font-size: 0.9em;
+}
+nav a {
+    font-size: 0.9em;
+}
+
+.header-btn{
+    padding-top: 5px;
+}
+
+li a{
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.sign-in{
+    background: #474fa0;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 8px 20px;
+}
+
+.sign-in:hover{
+    background: var(--main-color);
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.sign-up:hover{
+    list-style: none;
+    text-decoration: none;
+}
