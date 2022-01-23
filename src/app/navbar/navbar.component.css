@@ -5,6 +5,21 @@ header {
     max-height: 630px;
 }
 
+.navbar-nav > li {
+    float: left;
+    position: relative;
+    
+  }
+  .navbar-nav .active a::after {
+    border-bottom: 5px solid #474fa0;
+    bottom: -0px;
+    content: " ";
+    left: 0;
+    position: absolute;
+    right: 0;
+    
+  }
+
 
 
 .nav-item:last-child {

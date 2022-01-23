@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     const navb = document.querySelector('nav')
+    const list = document.querySelector('.si')
     if(window.location.pathname == '/login') navb!.style.background = 'transparent';
   }
 
