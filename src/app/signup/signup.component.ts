@@ -51,7 +51,7 @@ export class SignupComponent implements OnInit {
       title: 'Inscription effectuée',
       text: 'You submitted succesfully!',
       icon: 'success',
-      html: '<div class="text-center">Pour se connecter : <a href="/login">Page de connexion</a></div>'
+      html: '<div class="text-center">Connectez-vous ici : <a href="/login">Page de connexion</a></div>'
       
     }
     )

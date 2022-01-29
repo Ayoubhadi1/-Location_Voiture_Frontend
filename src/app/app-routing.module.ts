@@ -1,3 +1,4 @@
+import { TestComponent } from './test/test.component';
 
 import { PricingComponent } from './pricing/pricing.component';
 import { StepsAgencyComponent } from './steps-agency/steps-agency.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'steps', component: StepsAgencyComponent },
   { path: 'pricing', component: PricingComponent },
+  { path: 'test', component: TestComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

@@ -27,12 +27,25 @@
             <li class="nav-item" routerLinkActive="active">
               <a class="nav-link" href="#">About</a>
             </li>
-            <li class="nav-item su" routerLinkActive="active">
+            <li class="nav-item su" routerLinkActive="active" *ngIf="!isLoggedIn">
               <a routerLink="signup" class="nav-link sign-up" style="color: rgb(87, 83, 83);">Sign Up</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="!isLoggedIn">
               <a routerLink="login" class="nav-link sign-in" style="color: white; padding: 8px 20px;">Sign In</a>
             </li>
+
+            <div class="nav-item dropdown" *ngIf="isLoggedIn">
+              <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action">
+                  <img src="../../assets/admin1.png" class="avatar" alt="Avatar"> {{currentUser.username}} 
+              </a>
+              <div class="dropdown-menu">
+               <a href="#" class="dropdown-item"><i class="fas fa-user"></i> Profil</a>
+               <div class="divider dropdown-divider"></div>
+                <a href="#" class="dropdown-item"><i class="fas fa-cog"></i> Paramètres</a>
+                <div class="divider dropdown-divider"></div>
+                <a (click)="logout()"  class="dropdown-item"><i class="fas fa-sign-out-alt"></i>Déconnexion</a>
+              </div>
+            </div>
           
         </ul>
       </div>

@@ -13,6 +13,7 @@ import { SignupComponent } from './signup/signup.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     PricingComponent,
     SignupComponent,
-    NavbarComponent
+    NavbarComponent,
+    TestComponent
     ],
   imports: [
     BrowserModule,

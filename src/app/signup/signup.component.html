@@ -149,12 +149,35 @@
                 #pays="ngModel" >
         </div>
         <div class="form-group">
+          <label for="formFile" class="form-label" style="float: left; font-size: 90%;">- Photo de profil "Profil.png/jpeg"</label>
         	<input 
                 type="file" 
                 class="form-control input-lg" 
                 name="image" 
-                placeholder="Photo de profil"
-                [(ngModel)]="form.image"
+               
+                [(ngModel)]="form.imageProfil"
+                #image="ngModel"
+                 >
+        </div>
+        <div class="form-group">
+          <label for="formFile" class="form-label" style="float: left; font-size: 90%;">- cin Recto "cinRecto.png/jpeg"</label>
+        	<input 
+                type="file" 
+                class="form-control input-lg" 
+                name="cinRecto" 
+                
+                [(ngModel)]="form.cinRecto"
+                #image="ngModel"
+                 >
+        </div>
+        <div class="form-group">
+          <label for="formFile" class="form-label" style="float: left; font-size: 90%;">- cin Verso "cinVerso.png/jpeg"</label>
+        	<input 
+                type="file" 
+                class="form-control input-lg" 
+                name="cinVerso" 
+                
+                [(ngModel)]="form.cinVerso"
                 #image="ngModel"
                  >
         </div>
@@ -169,6 +192,6 @@
             User registered successfully!
           </div>
     </form>
-    <div class="text-center">Already have an account? <a routerLink="/login">Login here</a></div>
-    <button class="btn btn-outline-success" (click)="alertWithSuccess()">Click here!</button>
+    <div class="text-center">Vous avez déjà un compte? <a routerLink="/login">Connectez-vous ici</a></div>
+    <!-- <button class="btn btn-outline-success" (click)="alertWithSuccess()">Click here!</button> -->
 </div>

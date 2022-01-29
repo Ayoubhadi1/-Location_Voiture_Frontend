@@ -36,4 +36,15 @@ export class AuthService {
       pays:user.pays
     }, httpOptions);
   }
+
+  uploadFile( file: File , id : number ) : Observable<any>
+  {
+    let url = AUTH_API + "uploadImage/" + id ;
+
+    const formdata: FormData = new FormData();
+  
+    formdata.append('file', file);
+ 
+    return this.http.post(url , formdata);
+  }
 }
