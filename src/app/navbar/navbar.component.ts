@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { TokenStorageService } from './../services/token-storage.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -13,9 +14,11 @@ export class NavbarComponent implements OnInit {
   showAgentBoard = false;
   username: string | undefined;
   currentUser : any;
+  profilImage: any;
   isUser: boolean = false;
+  postResponse: any;
 
-  constructor(private tokenStorageService: TokenStorageService) { }
+  constructor(private tokenStorageService: TokenStorageService , private authService : AuthService) { }
 
   ngOnInit() {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
@@ -31,11 +34,19 @@ export class NavbarComponent implements OnInit {
 
       this.username = user.username;
     }
-    if (this.currentUser) {
+    if (this.currentUser && this.isLoggedIn) {
       this.isUser = this.currentUser?.roles?.includes('ROLE_USER');
+      let id:number = this.currentUser.id;
+      this.authService.viewImageProfil(id).subscribe(
+        res => {
+          this.postResponse = res;
+          this.profilImage = 'data:image/jpeg;base64,' + this.postResponse.image;
+        }
+      );  
     }
 
     console.log(this.isUser + " et " + this.isLoggedIn);
+    console.log(this.currentUser);
   }
 
   logout() {

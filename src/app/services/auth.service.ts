@@ -37,14 +37,19 @@ export class AuthService {
     }, httpOptions);
   }
 
-  uploadFile( file: File , id : number ) : Observable<any>
+  uploadFile( file: File , idUser : number , httpOption:any ) : Observable<any>
   {
-    let url = AUTH_API + "uploadImage/" + id ;
+    let url = AUTH_API + "uploadImage/" + idUser ;
 
     const formdata: FormData = new FormData();
   
-    formdata.append('file', file);
+    formdata.append('image', file);
  
-    return this.http.post(url , formdata);
+    return this.http.post(url , formdata , httpOption);
+  }
+
+  viewImageProfil(idUser : number) {
+    let url = AUTH_API + "get/imageProfil/info/" + idUser ;
+    return this.http.get(url);
   }
 }

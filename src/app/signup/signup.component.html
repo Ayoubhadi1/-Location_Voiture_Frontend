@@ -154,7 +154,7 @@
                 type="file" 
                 class="form-control input-lg" 
                 name="image" 
-               
+                (change)="selectImageProfil($event)"
                 [(ngModel)]="form.imageProfil"
                 #image="ngModel"
                  >
@@ -165,7 +165,7 @@
                 type="file" 
                 class="form-control input-lg" 
                 name="cinRecto" 
-                
+                (change)="selectCinRecto($event)"
                 [(ngModel)]="form.cinRecto"
                 #image="ngModel"
                  >
@@ -176,7 +176,7 @@
                 type="file" 
                 class="form-control input-lg" 
                 name="cinVerso" 
-                
+                (change)="selectCinVerso($event)"
                 [(ngModel)]="form.cinVerso"
                 #image="ngModel"
                  >

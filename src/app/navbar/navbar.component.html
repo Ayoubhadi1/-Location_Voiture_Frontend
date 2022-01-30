@@ -36,7 +36,7 @@
 
             <div class="nav-item dropdown" *ngIf="isLoggedIn">
               <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action">
-                  <img src="../../assets/admin1.png" class="avatar" alt="Avatar"> {{currentUser.username}} 
+                  <img *ngIf="isLoggedIn" [src]="profilImage" class="avatar" alt="Avatar"> {{currentUser.username}} 
               </a>
               <div class="dropdown-menu">
                <a href="#" class="dropdown-item"><i class="fas fa-user"></i> Profil</a>
