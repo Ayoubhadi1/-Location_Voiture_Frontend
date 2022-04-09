@@ -14,6 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TestComponent } from './test/test.component';
+import { DemanderCompteAgencierComponent } from './demander-compte-agencier/demander-compte-agencier.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TestComponent } from './test/test.component';
     PricingComponent,
     SignupComponent,
     NavbarComponent,
-    TestComponent
+    TestComponent,
+    DemanderCompteAgencierComponent
     ],
   imports: [
     BrowserModule,

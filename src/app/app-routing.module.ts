@@ -1,3 +1,4 @@
+import { DemanderCompteAgencierComponent } from './demander-compte-agencier/demander-compte-agencier.component';
 import { TestComponent } from './test/test.component';
 
 import { PricingComponent } from './pricing/pricing.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'steps', component: StepsAgencyComponent },
   { path: 'pricing', component: PricingComponent },
   { path: 'test', component: TestComponent },
+  { path: 'demanderCompteAgencier', component: DemanderCompteAgencierComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

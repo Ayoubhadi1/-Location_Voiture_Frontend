@@ -15,8 +15,11 @@
           <li class="nav-item" routerLinkActive="active">
             <a class="nav-link" href="#">Service</a>
           </li>
-          <li class="nav-item" routerLinkActive="active">
+          <li class="nav-item" routerLinkActive="active" *ngIf="!isLoggedIn">
             <a class="nav-link" routerLink="steps">J'ai une agence de location</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active" *ngIf="isLoggedIn">
+            <a class="nav-link" routerLink="demanderCompteAgencier">Demander un compte Agencier</a>
           </li>
           <li class="nav-item" routerLinkActive="active">
             <a class="nav-link" routerLink="pricing">Les tarifications</a>

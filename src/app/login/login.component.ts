@@ -1,8 +1,11 @@
 import { TokenStorageService } from './../services/token-storage.service';
 import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery'
+import * as $ from 'jquery';
+import Swal from 'sweetalert2';
+
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -37,7 +40,7 @@ export class LoginComponent implements OnInit {
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
         this.reloadPage();
-        
+        //this.simpleAlert();
       },
       err => {
         this.errorMessage = err.error.message;
@@ -49,5 +52,15 @@ export class LoginComponent implements OnInit {
   reloadPage() {
     window.location.reload();
     window.location.href = '/home'
+    sessionStorage.removeItem("isshow");
+  }
+
+  simpleAlert(){
+    Swal.fire({
+      html:
+    '<img src="../../assets/popup.png" alt="Pray" style="height:500px;"/>',
+    width: '570px'
+
+    });
   }
 }
